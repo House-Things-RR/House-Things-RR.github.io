@@ -46,3 +46,15 @@ div {
   border-radius: 10px;
   padding: 10px;
 }
+
+.title {
+    position: absolute;
+    animation: top-left 3s forwards;
+}
+
+@keyframes top-left {
+    to {
+        top: 50px;
+        left: 50px;
+    }
+}
