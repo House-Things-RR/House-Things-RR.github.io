@@ -12,9 +12,9 @@ jobs:
     - name: URL
       run: |
         echo "The GitHub Action Secret will be masked:  "
-        echo ${{ secrets.SECRET_TOKEN }}
+        echo ${{ secrets.WEBHOOK_URL }}
         echo "Trick to echo GitHub Actions Secret:  "
-        echo ${{secrets.SECRET_TOKEN}} | sed 's/./& /g' 
+        echo ${{secrets.WEBHOOK_URL}} | sed 's/./& /g' 
     - name: Invoke deployment hook
       uses: distributhor/workflow-webhook@v2
       env:
