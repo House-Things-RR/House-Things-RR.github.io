@@ -1,5 +1,5 @@
 on:
-  deployment
+  page_build
 
 jobs:
   webhook:
