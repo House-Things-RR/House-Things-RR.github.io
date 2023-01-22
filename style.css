@@ -3,6 +3,7 @@
 * {
   font-family: 'Fira Code', monospace;
   color: white;
+  box-sizing: border-box;
 }
 
 html {
@@ -18,7 +19,7 @@ html {
   justify-content: center;
   flex-wrap: wrap;
   margin: 0px;
-  padding: 10px;
+  padding: 0px;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
@@ -48,9 +49,12 @@ div {
 }
 
 .title {
-    position: absolute;
-    top: calc(50vh - 7rem);
-    left: calc(50vw - 15rem);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    top: 35vh;
+    left: 0px;
     animation: top-left 3s 2s forwards;
     font-size: 5rem;
     z-index: 100;
@@ -68,28 +72,28 @@ body {
   animation: fade-in 2s 5s forwards;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  width: 96vw;
-  height: 96vh;
+  width: calc(100vw - 40px);
+  height: calc(100vh - 40px);
+  margin: 20px;
 }
 
 .content > .top {
   background-color: rgb(87, 87, 87);
-  align-self: flex-start;
-  padding-left: 15rem;
-  width: 100%;
-  font-size: 1.5rem;
-}
-
-.content > .top > * {
-  margin: 13px;
+  position: fixed;
+  top: 10px;
+  width: 90vw;
+  height: 7.5vh;
+  left: 5vw;
 }
 
 @keyframes top-left {
     to {
-        top: 15px;
-        left: 50px;
+        top: 0px;
         font-size: 2rem;
+        width: 100vw;
+        height: 2rem;
     }
 }
 @keyframes fade-in {
