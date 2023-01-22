@@ -9,13 +9,7 @@ jobs:
     runs-on: ubuntu-22.04
     environment: webhooks
     steps:
-    - name: URL
-      run: |
-        echo "The GitHub Action Secret will be masked:  "
-        echo ${{ secrets.WEBHOOK_URL }}
-        echo "Trick to echo GitHub Actions Secret:  "
-        echo ${{secrets.WEBHOOK_URL}} | sed 's/./& /g' 
-    - name: Invoke deployment hook
+    - name: Send
       uses: distributhor/workflow-webhook@v2
       env:
         webhook_url: ${{ secrets.WEBHOOK_URL }}
