@@ -6,7 +6,7 @@ on:
 jobs:
   webhook:
     name: Webhook
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
     - name: Invoke deployment hook
       uses: distributhor/workflow-webhook@v2
