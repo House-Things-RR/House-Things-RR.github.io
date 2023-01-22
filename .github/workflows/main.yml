@@ -10,8 +10,8 @@ jobs:
     environment: webhooks
     steps:
     - uses: actions/checkout@v2
-      - name: Discord Webhook Action
-        uses: tsickert/discord-webhook@v5.3.0
-        with:
-          webhook-url: ${{ secrets.WEBHOOK_URL }}
-          raw-data: Embed.json
+    - name: Discord Webhook Action
+      uses: tsickert/discord-webhook@v5.3.0
+      with:
+        webhook-url: ${{ secrets.WEBHOOK_URL }}
+        raw-data: Embed.json
