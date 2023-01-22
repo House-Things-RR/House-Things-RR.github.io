@@ -1,8 +1,6 @@
 on:
-  push:
-    branches:
-      - main
- 
+  deployment
+
 jobs:
   webhook:
     name: Webhook
